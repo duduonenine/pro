@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>University Portal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(15px);
+      padding: 50px 35px;
+      border-radius: 20px;
+      text-align: center;
+      width: 90%;
+      max-width: 380px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+      animation: fadeIn 1s ease;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    h1 {
+      margin-bottom: 10px;
+      font-size: 26px;
+    }
+
+    p {
+      margin-bottom: 30px;
+      font-size: 14px;
+      opacity: 0.8;
+    }
+
+    .btn {
+      display: block;
+      text-decoration: none;
+      margin: 12px 0;
+      padding: 14px;
+      border-radius: 12px;
+      font-weight: 600;
+      transition: 0.3s;
+      background: rgba(255,255,255,0.2);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.3);
+    }
+
+    .btn:hover {
+      background: #fff;
+      color: #333;
+      transform: translateY(-2px);
+    }
+
+    .footer {
+      margin-top: 20px;
+      font-size: 12px;
+      opacity: 0.6;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="card">
+    <h1>🎓 University Portal</h1>
+    <p>Access your academic services easily</p>
+
+```
+<a href="login-stud.html" class="btn">Student Portal</a>
+<a href="login-staff.html" class="btn">Staff Portal</a>
+
+<div class="footer">
+  © 2026 All rights reserved
+</div>
+```
+
+  </div>
+</body>
+</html>
