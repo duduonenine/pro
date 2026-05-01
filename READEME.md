@@ -1,7 +1,7 @@
 # University Students Clearance Management System(SCMS) Web App Frontend(Demo)
 
 ## Description
-A simple web-based system for students and to access clearance services like:
+A simple web-based system for students to access clearance services like:
 - Library
 - Dormitory
 - Cafeteria
