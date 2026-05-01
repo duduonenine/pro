@@ -1,0 +1,615 @@
+:root {
+    --background: #e3e5e6;
+    --shadow: #aa99aa;
+    --shadow-transparent: #99999999;
+    --main: #ffffff;
+    --main-transparent: #ffffff99;
+    --primary: #3aa0bf;
+    --primary-dark: #3f7083;
+    --redish: #ff3411;
+    --hover: #6aa0b999;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: var(--main);
+}
+
+h1 {
+    font-size: clamp(18px, 3vw, 30px);
+}
+
+h2 {
+    font-size: clamp(16px, 2vw, 18px);
+}
+
+h3 {
+    font-size: clamp(14px, 2vw, 16px);
+}
+
+h4 {
+    font-size: clamp(16px, 2vw, 18px);
+}
+
+h5 {
+    font-size: clamp(10px, 2vw, 12px);
+}
+
+li {
+    font-size: clamp(14px, 2vw, 16px);
+}
+
+body {
+    background: var(--background);
+    display: grid;
+     min-height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 70px 1fr auto;
+    grid-template-areas:
+        "nav "
+        "main"
+        "footer"
+    ;
+}
+
+.nav {
+    grid-area: nav;
+    display: flex;
+    background: var(--primary);
+    padding: 2px 2%;
+    box-shadow: 0px 0px 20px var(--shadow);
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid var(--primary);
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+nav div {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 0px 5px;
+}
+
+.v-dots {
+    display: grid;
+    width: 25px;
+    padding: 0;
+}
+.v-dots:hover{
+    cursor: pointer;
+}
+
+.v-dots:active {
+    scale: 1.2;
+}
+
+.toggle-menu {
+    width: 30px;
+    height: 25px;
+    border-radius: 5px;
+}
+
+.toggle-menu:hover {
+    background: var(--primary-dark);
+    cursor: pointer;
+}
+
+nav img {
+    width: 80px;
+    height: 80px;
+}
+
+.nav-links {
+    display: none;
+}
+
+.three-dot-menu {
+    display: grid;
+    padding: 5px;
+    position: fixed;
+    top: 75px;
+    right: -100%;
+    width: 40%;
+    background: var(--primary-dark);
+    box-shadow: 0px 0px 10px black;
+    border-radius: 5px;
+    transition: right 0.3s ease;
+    z-index: 2;
+}
+
+.three-dot-menu a {
+    display: grid;
+    text-decoration: none;
+    color: white;
+    padding: 7px 10px;
+    border-radius: 7px;
+    background: var(--primary-dark);
+}
+
+.three-dot-menu a:hover {
+    background: var(--hover);
+}
+
+.three-dot-menu.active {
+    right: 5px;
+}
+
+.main-header {
+    color: white;
+}
+
+nav h2 {
+    display: none;
+}
+
+.sidebar {
+    display: block;
+    position: fixed;
+    top: 70px;
+    left: -100%;
+    width: 250px;
+    height: calc(100vh - 70px);
+    background: var(--primary-dark);
+    transition: left 0.3s ease;
+    z-index: 2;
+    overflow-y: auto;
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+#log {
+    padding: 0;
+    border-radius: 12px;
+}
+
+.logout-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font: inherit;
+    color: white;
+    width: 100%;
+    padding: 12px 7px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.sidebar h2 {
+    padding-top: 10px;
+    text-align: center;
+    border-bottom: 8px solid var(--primary);
+    padding-bottom: 20px;
+}
+
+.sidebar ul {
+    display: block;
+    padding: 5px;
+    margin-top: 0px;
+}
+
+.sidebar li {
+    list-style-type: none;
+    margin: 16px;
+    background: var(--primary);
+    padding: 7px 7px;
+    border-radius: 7px;
+    color: white;
+}
+
+.sidebar li:hover {
+    transition: 0.1s background;
+    background: #6aa0b999;
+}
+
+.sidebar li:active {
+    transition: 0.1s background;
+    background: var(--primary);
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: white;
+}
+
+.main {
+    width: 100%;
+    padding: 20px;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.request {
+    display: grid;
+    padding: 3px;
+    width: 130px;
+    color: white;
+    background: var(--primary);
+    border: none;
+    border-radius: 7px;
+    margin: 7px 0px;
+    box-shadow: 0px 0px 10px grey;
+    transition: scale 0.2s;
+}
+
+.request:hover {
+    scale: 1.02;
+}
+
+.request:active {
+    scale: 1.0001;
+}
+.request.pending {
+    background: gray;
+    cursor: progress;
+}
+.page-header {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+.page-header h1,
+.page-header p {
+    margin: 0;
+}
+
+.status {
+    display: grid;
+    font-weight: bold;
+    padding: 5px;
+    background: #999;
+    border-radius: 20px;
+    width: 200px;
+    text-align: center;
+}
+
+.status.active {
+    background: rgb(193, 247, 200);
+}
+
+.status-issue {
+    display: grid;
+    font-weight: bold;
+    padding: 5px;
+    background: #fd191a66;
+    border-radius: 20px;
+    width: 100px;
+    text-align: center;
+}
+
+
+/**********************************************************
+***********************************************************/
+
+.library-c, .cafe-c, .dormitory-c, .registrar-c{
+    display: flex; 
+    flex-direction: column;
+    gap: 10px;
+    color: rgb(51, 40, 40);
+    background: linear-gradient(135deg, rgb(194, 192, 192), rgb(235, 232, 232), rgb(194, 192, 192));
+    padding: 20px; 
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px grey;
+    margin: 20px 0px;
+}
+
+.l-c, .c-c ,.d-c, .r-c{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.status {
+    display: inline-block;
+    font-weight: bold;
+    padding: 8px 15px;
+    background: #999;
+    border-radius: 20px;
+    width: fit-content;
+    min-width: 150px;
+    text-align: center;
+}
+
+.hello{
+    color: #292947;
+    margin-bottom: 0px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.dash-board{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    background: linear-gradient(45deg, rgb(17, 175, 223),rgb(0, 89, 255));
+    padding: 20px;
+    margin: 20px 0px;
+    border-radius: 20px;
+    height: 100px;
+}
+
+.percent{
+    font-size: 40px;
+    margin-top: 20px;
+}
+
+.dept-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 20px;
+}
+
+.depts{
+    display: grid;
+    color: rgb(51, 40, 40);
+    background: linear-gradient(135deg, rgb(194, 192, 192), rgb(235, 232, 232),rgb(194, 192, 192));
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px grey;
+    transition: transform 0.2s;
+}
+.depts:hover{
+    transform: translateY(-4px);
+}
+
+.d-c{
+  display: flex;
+  justify-content: space-between;
+}
+
+.cleared{
+    width: 40px;
+}
+
+.waiting{
+    width: 40px;
+}
+
+.done{
+    display: grid;
+    background: rgb(193, 247, 200);
+    color: green;
+    padding: 5px;
+    width: 60px;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.Pending{
+  display: grid;
+  padding: 5px;
+  width: 60px;
+  border-radius: 15px;
+  color: #ff4800;
+  background: #fdbf5a77;
+  text-align:  center;
+}
+
+.not-started{
+  display: grid;
+  padding: 5px;
+  width: 80px;
+  border-radius: 15px;
+  color: grey;
+  background: #99999955;
+  text-align:  center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer {
+  grid-area: footer;
+  display: grid;
+  background: var(--primary);
+  text-align: center;
+  align-content: center;
+  height: auto;
+  padding: 3px;
+  color: var(--main);
+  font-family: cursive;
+  font-size: 12px;
+  z-index: 2;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+@media (width > 600px) {
+  body {
+    display: grid;
+     min-height: 100vh;
+    grid-template-columns: 0.1fr 1fr;
+    grid-template-rows: 70px 1fr auto;
+    grid-template-areas:
+      "nav  nav"
+      "aside  main"
+      "footer  footer";
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 7px;
+  }
+
+  .nav-links a:hover {
+    background: var(--primary);
+  }
+
+  .toggle-menu {
+    display: none;
+  }
+
+  .v-dots {
+    display: none;
+  }
+
+  #log {
+    padding: 0;
+    border-radius: 12px;
+  }
+
+  .logout-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font: inherit;
+    color: white;
+    width: 100%;
+    padding: 12px 7px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .sidebar {
+    grid-area: aside;
+    display: block;
+    position: sticky;
+    top: 70px;
+    z-index: 2;
+    height: calc(100vh - 70px);
+    background: var(--primary-dark);
+    color: white;
+  }
+}
+
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 999;
+}
+
+/* Modal box (reuse your form styling) */
+.modal-content {
+  background: #fff;
+  border-radius: 10px;
+  width: 350px;
+  max-width: 90%;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  animation: popIn 0.2s ease-in-out;
+}
+
+/* Hide helper class */
+.hidden {
+  display: none;
+}
+/* ===== Logout Modal Styling ===== */
+.logout-modal .modal-content {
+  text-align: center;
+  padding: 25px;
+  border-radius: 15px;
+  background: white;
+  width: 300px;
+  animation: popIn 0.2s ease-in-out;
+}
+
+.logout-modal h4 {
+  margin-bottom: 10px;
+  color: var(--main);
+}
+
+.logout-modal p {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* buttons layout */
+.logout-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+/* confirm button */
+.logout-confirm {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background: var(--redish);
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.logout-confirm:hover {
+  opacity: 0.9;
+}
+
+/* cancel button */
+.logout-cancel {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background: var(--primary);
+  color: white; 
+  cursor: pointer;
+}
+
+.logout-cancel:hover {
+  background: var(--primary-dark);
+}
+
+/* =========================
+   ANIMATION (optional but nice)
+========================= */
+
+@keyframes popIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

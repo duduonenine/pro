@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/login-stud.css">
+    <script src="js/login-stud.js" defer></script>
+    <title>DMU SCMS | LOGIN</title>
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="logo-container">
+            <img src="pic/profile.png" class="logo">
+        </div>
+        <div class="container">
+            <h2 class="sign-in">sign in</h2>
+            <form methode="post" class="form-container">
+                <input type="username" name="username" placeholder="ID Dmu*******" class="inputs"
+                    pattern="Dmu[0-9]{0-9}" required>
+                <input type="password" name="psw" placeholder="password" class="inputs" required>
+                <button type="submit" name="button" class="button">login</button>
+            </form>
+
+        </div>
+        <a href="#" class="forgot-psw">forgot password ?</a>
+    </div>
+
+    <div id="error-modal" class="modal hidden error-modal">
+  <div class="modal-content error-box">
+    <h4>Login Failed</h4>
+    <p id="error-message">Invalid username or password</p>
+    <button id="close-error" class="error-btn">OK</button>
+  </div>
+</div>
+</body>
+
+</html>

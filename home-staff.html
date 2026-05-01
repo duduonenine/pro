@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DPT | HOME</title>
+  <link rel="stylesheet" href="css/home.css">
+  <script src="js/home.js" defer></script>
+</head>
+
+<body>
+  <nav class="nav">
+    <div>
+      <img src="pic/menu-w.svg" class="toggle-menu">
+      <img src="pic/graduation-b.png" alt="">
+      <h1 class="main-header">DMU SCMS .dpt</h1>
+    </div>
+    <ul class="nav-links">
+      <a href="home-staff.html">
+        <li>Home</li>
+      </a>
+      <a href="https://www.dmu.edu.et/" target="parent">
+        <li>Dmu official</li>
+      </a>
+      <a href="http://www.dmu.edu.et/?cat=8" target="parent">
+        <li>News</li>
+      </a>
+    </ul>
+    <img src="pic/dots-vertical-w.svg" class="v-dots">
+    <div class="three-dot-menu" id="">
+      <a href="">Home</a>
+      <a href="https://www.dmu.edu.et/" target="_blank">
+        Dmu official
+      </a>
+      <a href="https://www.dmu.edu.et/?cat=8" target="_blank">
+        News
+      </a>
+    </div>
+  </nav>
+
+  <aside class="sidebar">
+    <h2>Menu</h2>
+    <ul>
+      <a href="home-staff.html">
+        <li>Home</li>
+      </a>
+      <a href="contact.html">
+        <li>Contact</li>
+      </a>
+      <li>System</li>
+      <li>Settings</li>
+      <li id="log">
+        <button type="button" class="logout-btn">
+          <span>Logout</span>
+          <img src="../pic/logout-w.svg">
+        </button>
+      </li>
+    </ul>
+  </aside>
+  <main class="main">
+    <div class="profile">
+      <h3 class="contact">
+        Mr. Michael B Jordan<br>
+        09 58 62 31 42
+        <br>
+        Jordan@gmail.com
+        <br>
+        19.10.2018 EC.
+      </h3>
+      <img src="../pic/profile-w.svg" class="profile-pic">
+    </div>
+    <br>
+    <hr>
+    <br>
+    <h2 class="dashboard-header">Request Analysis</h2>
+    <div class="dash-board">
+      <div class="cards">
+        <h1 class="num">463</h1>
+        <button id="btn-upcoming" class="btn">upcoming</button>
+      </div>
+      <div class="cards">
+        <h1 class="num">105</h1>
+        <button id="btn-approved" class="btn">approved</button>
+      </div>
+      <div class="cards">
+        <h1 class="num">13</h1>
+        <button id="btn-rejected" class="btn">rejected</button>
+      </div>
+    </div>
+    <br>
+    <hr>
+    <br>
+    <div class="table-info">
+      <h3 class="caption">Upcoming Requests</h3>
+      <form action="">
+        <input type="text" placeholder="search" class="search-box">
+      </form>
+    </div>
+    <div class="table-container" id="upcoming-section">
+      <table class="table">
+        <tr class="th">
+          <th class="t-no">No</th>
+          <th class="t-id">ID</th>
+          <th class="t-name">Name</th>
+          <th class="t-dept">Dep't</th>
+          <th class="t-sec">Section</th>
+          <th class="t-ac">Year</th>
+          <th class="t-stat">status</th>
+        </tr>
+
+        <tr>
+          <td class="main-data">1</td>
+          <td class="main-data">1701001</td>
+          <td class="main-data">Abel Tesfaye</td>
+          <td class="main-data">Software Eng.</td>
+          <td class="main-data">A</td>
+          <td class="main-data">2nd yr</td>
+          <td class="main-data"><button class="status">approve</button><button class="status">reject</button></td>
+        </tr>
+        <tr>
+          <td class="main-data">2</td>
+          <td class="main-data">1701002</td>
+          <td class="main-data">Selamawit Desta</td>
+          <td class="main-data">Civil Eng.</td>
+          <td class="main-data">B</td>
+          <td class="main-data">3rd yr</td>
+          <td class="main-data"><button class="status">approve</button><button class="status">reject</button></td>
+        </tr>
+        <tr>
+          <td class="main-data">3</td>
+          <td class="main-data">1701003</td>
+          <td class="main-data">Kebede Alemu</td>
+          <td class="main-data">Mechanical</td>
+          <td class="main-data">A</td>
+          <td class="main-data">1st yr</td>
+          <td class="main-data"><button class="status">approve</button><button class="status">reject</button></td>
+        </tr>
+        <tr>
+          <td class="main-data">4</td>
+          <td class="main-data">1701004</td>
+          <td class="main-data">Hana Girma</td>
+          <td class="main-data">Software Eng.</td>
+          <td class="main-data">C</td>
+          <td class="main-data">4th yr</td>
+          <td class="main-data"><button class="status">approve</button><button class="status">reject</button></td>
+        </tr>
+        <tr>
+          <td class="main-data">5</td>
+          <td class="main-data">1701005</td>
+          <td class="main-data">Bereket Mulu</td>
+          <td class="main-data">Electrical</td>
+          <td class="main-data">A</td>
+          <td class="main-data">2nd yr</td>
+          <td class="main-data"><button class="status">approve</button><button class="status">reject</button></td>
+        </tr>
+        <tr>
+          <td class="main-data">6</td>
+          <td class="main-data">1701006</td>
+          <td class="main-data">Mekdes Tadesse</td>
+          <td class="main-data">Chemical</td>
+          <td class="main-data">B</td>
+          <td class="main-data">3rd yr</td>
+          <td class="main-data"><button class="status">approve</button><button class="status">reject</button></td>
+        </tr>
+        <tr>
+          <td class="main-data">7</td>
+          <td class="main-data">1701007</td>
+          <td class="main-data">Yonas Bekele</td>
+          <td class="main-data">Mechanical</td>
+          <td class="main-data">C</td>
+          <td class="main-data">2nd yr</td>
+          <td class="main-data"><button class="status">approve</button><button class="status">reject</button></td>
+        </tr>
+        <tr>
+          <td class="main-data">8</td>
+          <td class="main-data">1701008</td>
+          <td class="main-data">Marta Solomon</td>
+          <td class="main-data">Software Eng.</td>
+          <td class="main-data">A</td>
+          <td class="main-data">1st yr</td>
+          <td class="main-data"><button class="status">approve</button><button class="status">reject</button></td>
+        </tr>
+        <tr>
+          <td class="main-data">9</td>
+          <td class="main-data">1701009</td>
+          <td class="main-data">Nahom Assefa</td>
+          <td class="main-data">Civil Eng.</td>
+          <td class="main-data">B</td>
+          <td class="main-data">3rd yr</td>
+          <td class="main-data"><button class="status">approve</button><button class="status">reject</button></td>
+        </tr>
+        <tr>
+          <td class="main-data">10</td>
+          <td class="main-data">1701010</td>
+          <td class="main-data">Saron Gebru</td>
+          <td class="main-data">Electrical</td>
+          <td class="main-data">C</td>
+          <td class="main-data">4th yr</td>
+          <td class="main-data"><button class="status">approve</button><button class="status">reject</button></td>
+        </tr>
+      </table>
+    </div>
+
+    <br>
+
+    <div class="table-info">
+      <h3 class="caption">Approved Requests</h3>
+      <form action="">
+        <input type="text" placeholder="search" class="search-box">
+      </form>
+    </div>
+    <div class="table-container" id="approved-section">
+      <table class="table">
+        <tr class="th">
+          <th class="t-no">No</th>
+          <th class="t-id">ID</th>
+          <th class="t-name">Name</th>
+          <th class="t-dept">Dep't</th>
+          <th class="t-sec">Section</th>
+          <th class="t-ac">Year</th>
+          <th class="t-stat">status</th>
+        </tr>
+      </table>
+    </div>
+
+    <br>
+
+    <div class="table-info">
+      <h3 class="caption">Rejected Requests</h3>
+      <form action="">
+        <input type="text" placeholder="search" class="search-box">
+      </form>
+    </div>
+    <div class="table-container" id="rejected-section">
+      <table class="table">
+        <tr class="th">
+          <th class="t-no">No</th>
+          <th class="t-id">ID</th>
+          <th class="t-name">Name</th>
+          <th class="t-dept">Dep't</th>
+          <th class="t-sec">Section</th>
+          <th class="t-ac">Year</th>
+          <th class="t-stat">status</th>
+        </tr>
+      </table>
+    </div>
+    <div id="reject-modal" class="modal hidden">
+      <form class="form modal-content" id="reject-form">
+        <h4 class="rejection-form-header">Rejection form</h4>
+        <input type="text" class="inputs" placeholder="rejected student id" required>
+        <input type="text" class="inputs" placeholder="rejected by" required>
+        <input type="text" class="inputs" placeholder="case" required>
+        <input type="text" class="inputs" placeholder="record found on" required>
+
+        <button type="submit" class="button">Submit Form</button>
+      </form>
+    </div>
+  </main>
+  <footer class="footer">
+    &copy; DMU Software Engineering DPT. 2018 E.C
+  </footer>
+
+  <div id="logout-modal" class="modal hidden logout-modal">
+    <div class="modal-content logout-box">
+      <h4>Logout Confirmation</h4>
+      <p>Are you sure you want to logout?</p>
+      <div class="logout-actions">
+        <button id="confirm-logout" class="logout-confirm">Logout</button>
+        <button id="cancel-logout" class="logout-cancel">Cancel</button>
+      </div>
+
+    </div>
+  </div>
+</body>
+
+</html>

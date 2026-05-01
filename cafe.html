@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/student.js" defer></script>
+  <title>DMU | Cafeteria</title>
+</head>
+
+<body>
+  <nav class="nav">
+    <div>
+      <img src="pic/menu-w.svg" class="toggle-menu">
+      <img src="pic/graduation-b.png" alt="">
+      <h1 class="main-header">DMU SCMS .st</h1>
+    </div>
+    <ul class="nav-links">
+      <a href="home-stud.html">
+        <li>Home</li>
+      </a>
+      <a href="https://www.dmu.edu.et/" target="_blank">
+        <li>Dmu official</li>
+      </a>
+      <a href="http://www.dmu.edu.et/?cat=8" target="_blank">
+        <li>News</li>
+      </a>
+    </ul>
+    <img src="pic/dots-vertical-w.svg" class="v-dots">
+    <div class="three-dot-menu" id="">
+      <a href="">Home</a>
+      <a href="https://www.dmu.edu.et/" target="_blank">
+        Dmu official
+      </a>
+      <a href="https://www.dmu.edu.et/?cat=8" target="_blank">
+        News
+      </a>
+    </div>
+  </nav>
+  <aside class="sidebar">
+    <h2>Menu</h2>
+    <ul>
+      <a href="home-stud.html">
+        <li>Home</li>
+      </a>
+      <a href="library.html">
+        <li>Library</li>
+      </a>
+      <a href="dormitory.html">
+        <li>Dormitory</li>
+      </a>
+      <a href="cafe.html">
+        <li>Cafe</li>
+      </a>
+      <a href="registrar.html">
+        <li>Registrar</li>
+      </a>
+      <li>Settings</li>
+      <li id="log">
+        <button type="button" class="logout-btn">
+          <span>Logout</span>
+          <img src="pic/logout-w.svg">
+        </button>
+      </li>
+    </ul>
+  </aside>
+  <main class="main">
+    <div class="page-header">
+      <h1>Cafeteria Department</h1>
+      <p>Academic Year: 2025/2026</p>
+    </div>
+
+    <div class="cafe-c">
+      <div class="c-c">
+        <div>
+          <h1>Cafeteria</h1>
+        </div>
+        <div>
+          <button type="button" class="request">Request clearance</button>
+        </div>
+      </div>
+      <h5 class="status"></h5>
+    </div>
+  </main>
+  <footer class="footer">
+    &copy; DMU Software Engineering DPT. 2018 E.C
+  </footer>
+
+  <div id="logout-modal" class="modal hidden logout-modal">
+        <div class="modal-content logout-box">
+            <h4>Logout Confirmation</h4>
+            <p>Are you sure you want to logout?</p>
+            <div class="logout-actions">
+                <button id="confirm-logout" class="logout-confirm">Logout</button>
+                <button id="cancel-logout" class="logout-cancel">Cancel</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

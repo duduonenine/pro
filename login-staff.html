@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/login-staff.css">
+  <script src="js/login-staff.js" defer></script>
+  <title>SCMS | LOGIN</title>
+</head>
+
+<body>
+  <form method="post" class="container">
+    <img src="pic/profile.png" class="logo">
+    <h3 class="signin">Student Clearance Management System
+      <br>
+      <br>
+      Sign in
+    </h3>
+    <select name="role" id="" class="select">
+      <option value="" selected hidden>select role</option>
+      <option value="staff">staff</option>
+      <option value="admin">admin</option>
+    </select>
+    <input type="text" placeholder="username" class="inputs" required>
+    <input type="password" placeholder="password" class="inputs" required>
+    <button type="submit" class="button">login</button>
+  </form>
+  <a href="#">forgot password ?</a>
+
+ <div id="error-modal" class="modal hidden error-modal">
+  <div class="modal-content error-box">
+    <h4>Login Failed</h4>
+    <p id="error-message">Invalid username or password</p>
+    <button id="close-error" class="error-btn">OK</button>
+  </div>
+</div>
+</body>
+
+</html>

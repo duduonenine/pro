@@ -1,0 +1,152 @@
+body {
+  background: #ade8f4;
+  justify-items: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.container {
+  display: grid;
+  width: 80vw;
+  max-width: 350px;
+  justify-items: center;
+  background: linear-gradient(135deg, #11182799, #11182766, #11182799, #11182766, #11182799, #11182766);
+  padding: 5px;
+  margin-top: 7%;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px grey;
+}
+
+.logo {
+  display: grid;
+  width: 70px;
+  border-radius: 50%;
+  padding: 3px;
+  margin-top: 25px;
+  box-shadow: 0px 0px 40px black;
+}
+
+.signin {
+  font-size: 16px;
+  text-align: center;
+  width: 80%;
+  color: white;
+}
+
+.select {
+  display: block;
+  width: 90%;
+  padding: 6px;
+  margin: 5px 0px;
+  color: white;
+  background: #11182777;
+  border-radius: 7px;
+  outline: none;
+  border: 2px solid #11182711;
+}
+
+.select:hover {
+  transition: border 0.3s;
+  border: 2px solid rgb(25, 172, 209);
+  cursor: pointer;
+}
+
+.inputs {
+  display: grid;
+  width: 85%;
+  padding: 6px;
+  margin: 7px 0px;
+  border-radius: 10px;
+  outline: none;
+  border: 2px solid #11182744;
+}
+
+.inputs:focus {
+  transition: border 0.3s;
+  border: 2px solid rgb(25, 172, 209);
+}
+
+.button {
+  display: grid;
+  padding: 5px;
+  width: 30%;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  border-radius: 9px;
+  border: none;
+  background: #11182799;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.button:hover {
+  scale: 1.03;
+  background: black;
+  cursor: pointer;
+}
+
+.button:active {
+  scale: 1.00;
+}
+
+a {
+  display: grid;
+  justify-self: center;
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* ===== ERROR MODAL ===== */
+
+.hidden {
+  display: none !important;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+.error-modal .modal-content {
+  background: white;
+  width: 300px;
+  padding: 25px;
+  border-radius: 15px;
+  text-align: center;
+  animation: popIn 0.2s ease-in-out;
+}
+
+.error-modal h4 {
+  color: #e53e3e;
+  margin-bottom: 10px;
+}
+
+.error-modal p {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* OK button */
+.error-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background: #e53e3e;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.error-btn:hover {
+  opacity: 0.9;
+}

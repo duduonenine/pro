@@ -1,0 +1,148 @@
+body{
+    display: grid;
+    background: white;
+    justify-content: center;
+}
+
+.main-container{
+    display: grid;
+    justify-items: center;
+    margin: 90px 0px;
+    width: 90vw;
+    max-width: 400px;
+}
+
+.logo-container{
+    display: grid;
+    width: 100%;
+    justify-items: center;
+    padding: 10px 0px;
+    border-radius: 18px;
+    margin: 20px;
+    background: rgb(194, 192, 192);
+    box-shadow: 0px 0px 10px grey;
+    border: 1px solid grey;
+}
+
+.logo{
+    width: 20%;
+    border-radius: 50%;
+    background: grey;
+}
+
+.container{
+    display: grid;
+    width: 100%;
+    justify-items: center;
+    padding: 10px 0px;
+    border-radius: 18px;
+    background: linear-gradient(45deg,#999099,rgb(194, 192, 192),rgb(194, 192, 192),#999091);
+    box-shadow: 0px 0px 10px grey;
+    border: 1px solid grey;
+}
+
+.sign-in{
+    color: black;
+    font-size: 35px;
+    font-weight: bold;
+    text-shadow: 0px 0px 3px black;
+}
+
+.form-container{
+    width: 100%;
+}
+
+.inputs{
+    display: grid;
+    justify-self: center;
+    width: 80%;
+    margin: 10px;
+    padding: 7px;
+    border-radius: 7px;
+    border: none;
+}
+
+.button{
+    display: grid;
+    justify-self: center;
+    border: none;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    background: black;
+    padding: 4px;
+    width: 40%;
+    border-radius: 10px;
+    margin-top: 40px;
+}
+
+.forgot-psw{
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 15px;
+}
+
+
+
+/* =======================
+   MODERN GLASS POPUP
+======================= */
+
+
+
+/* background overlay */
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 9999;
+}
+
+/* hide modal */
+.hidden {
+    display: none;
+}
+
+/* modal box */
+.error-box {
+    background: white;
+    width: 280px;
+    padding: 20px;
+    border-radius: 10px;
+
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* title */
+.error-box h4 {
+    color: red;
+    margin-bottom: 10px;
+}
+
+/* message */
+#error-message {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* button */
+.error-btn {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 6px;
+
+    background: red;
+    color: white;
+    cursor: pointer;
+}
+
+.error-btn:hover {
+    opacity: 0.9;
+}
