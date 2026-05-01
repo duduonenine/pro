@@ -1,4 +1,4 @@
-# University Management Web App
+# University Management Web App Demo
 
 ## Description
 A simple web-based system for students and staff to access services like:
