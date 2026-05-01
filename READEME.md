@@ -1,7 +1,7 @@
-# University Management Web App Demo
+# University Students Clearance Management System(SCMS) Web App Frontend(Demo)
 
 ## Description
-A simple web-based system for students and staff to access services like:
+A simple web-based system for students and to access clearance services like:
 - Library
 - Dormitory
 - Cafeteria
@@ -20,6 +20,9 @@ A simple web-based system for students and staff to access services like:
 
 ## How to Run
 Open index.html in a browser.
+
+## Student portal username, psw 
+Dmu123456,1234
 
 ## Author
 DUDU ONENINE
