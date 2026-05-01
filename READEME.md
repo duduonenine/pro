@@ -22,4 +22,4 @@ A simple web-based system for students and staff to access services like:
 Open index.html in a browser.
 
 ## Author
-Your Name
+DUDU ONENINE
